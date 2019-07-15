@@ -1,0 +1,20 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka-service01:8761/eureka/,http://eureka-service02:8761/eureka/,http://eureka-service03:8761/eureka/
+
+---
+server:
+  port: 18081
+spring:
+  profiles: user
+  application:
+      name: spring-cloud-config-user
+
+---
+server:
+  port: 28081
+spring:
+  profiles: item
+  application:
+      name: spring-cloud-config-item
